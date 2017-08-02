@@ -1,3 +1,11 @@
+## QuickStart
+
+1) clone or Download
+2) npm install
+3) npm start
+4) npm test -- run tests
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
