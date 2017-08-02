@@ -88,13 +88,15 @@ class Deck extends React.Component {
         if (!card)
           break;
 
-        //create hand or grab existing hand
+        //create hand if doesn't exist
         if (handsCopy.length <= iPlayer) {
           handsCopy.push([ ]);
         }
 
+        //get the hand
         var hand = handsCopy[iPlayer];
 
+        //push card into hand
         hand.push(card);
 
         //remove card from cardsCopy

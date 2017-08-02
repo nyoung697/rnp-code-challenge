@@ -35,3 +35,14 @@ test ('deck is dealt from top', () => {
   expect(obj.handsCopy[2][0]).toBe("C3");
   expect(obj.handsCopy[3][0]).toBe("C4");
 })
+
+test ('deck is shuffled', () => {
+  var deck = new Deck();
+  var cards = deck.state.cards
+  var shuffledCards= deck.shuffleCards();
+
+  //These tests could potentially fail even if the array gets shuffled... if by coincidence the random sampled index doesn't get swapped.
+  expect(shuffledCards[0]).not.toBe(cards[0]);
+  expect(shuffledCards[8]).not.toBe(cards[8]);
+  expect(shuffledCards[47]).not.toBe(cards[47]);
+})
