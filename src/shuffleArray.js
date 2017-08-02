@@ -1,3 +1,7 @@
+//Read up on the Fisher-Yates shuffle algorithm, and realized that their's is slightly different
+//https://blog.codinghorror.com/the-danger-of-naivete/
+//If there were lots of decks, this one wouldn't be as efficient and some permutations would be favoured more than others over a larger number of shuffles.
+
 const shuffleArray = (array) => {
   const length = array.length;
   array = array.slice();
