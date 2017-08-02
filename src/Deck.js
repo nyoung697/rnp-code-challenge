@@ -1,6 +1,7 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
-var shuffle = require('knuth-shuffle').knuthShuffle;
+//var shuffle = require('knuth-shuffle').knuthShuffle;
+import shuffleArray from './shuffleArray';
 
 //Manually create the deck, as it never changes
 const cards = [
@@ -60,7 +61,7 @@ class Deck extends React.Component {
   }
 
   shuffleCards() {
-    return shuffle(this.state.cards.slice());
+    return shuffleArray(this.state.cards.slice());
   }
 
   dealCards(numPlayers, numCards) {
