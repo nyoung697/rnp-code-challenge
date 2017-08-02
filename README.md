@@ -4,10 +4,11 @@ http://rnp-code-challenge.azurewebsites.net/
 
 ## QuickStart
 
-1) clone or Download
-2) npm install
-3) npm start
-4) npm test -- run tests
+1) git clone https://github.com/nyoung697/rnp-code-challenge.git
+2) cd rnp-code-challenge
+3) npm install
+4) npm start
+4a) npm test -- run tests
 
 ## Create React App
 
