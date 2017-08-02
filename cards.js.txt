@@ -12,9 +12,6 @@ I chose JavaScript/React for this exercise because:
 
 CONSIDERATIONS
 
- * The description doesn't mention how many "players" or "hands" need to be dealt.  It just says deal one card and potentially all the cards.  I added a setting in the package.json file to specify number of hands to deal.
-
-
-* Knuth-Shuffle -- used this rather than re-inventing the wheel.  Easy to install via npm.
-
-* Using nested-loops is fine, as the max iterations is 52, so there are no performance worries.
+ * The description doesn't mention how many "players" or "hands" need to be dealt.  It just says deal one card and potentially all the cards.  I added a setting to specify number of hands to deal.
+ * Knuth-Shuffle (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array). Used this initially, rather than re-inventing the wheel, as it was easy to install via npm.  However, I decided to write my own function based on this approach (and this egghead.io video I watched: https://egghead.io/lessons/typescript-create-random-integers-in-a-given-range) 
+ * Using nested-loops is fine, as the max iterations is 52, so there are no performance worries.

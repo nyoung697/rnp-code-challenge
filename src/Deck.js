@@ -73,7 +73,13 @@ class Deck extends React.Component {
       return hand.slice();
     })
 
-    while (cardsCopy.length > 0) {
+    //figure out how many cards to deal in total
+    //if -1 is passed in, then deal all cards
+    var cardsToDeal = numPlayers * numCards;
+    if (cardsToDeal < 0 || cardsToDeal > 52) cardsToDeal = 52;
+
+    var cardCounter = 0;
+    while (cardsCopy.length > 0 && cardCounter < cardsToDeal) {
       for (let iPlayer = 0; iPlayer < numPlayers; iPlayer++) {
         //always get top card on deck (first item in array)
         const card = cardsCopy[0];
@@ -93,6 +99,9 @@ class Deck extends React.Component {
 
         //remove card from cardsCopy
         cardsCopy.splice(0, 1);
+
+        //increment card counter
+        cardCounter++;
       }
     }
 
@@ -111,6 +120,8 @@ class Deck extends React.Component {
         <div className="row">
           <div className="col-lg-4">
             <Panel header="Deck" bsStyle="danger">
+              <strong>Count: </strong> {cards.length} <br />
+              <strong>Cards: </strong>
               {cards.join(', ')}
             </Panel>            
           </div>
@@ -146,7 +157,7 @@ const PlayerHands = (props) => {
   const { hands } = props;
   const listItems = hands.map((hand, i) => 
     <li key={i} className="list-group-item">
-      <strong>Player {i + 1}: </strong> {hand.join(', ')}
+      <strong>Player {i + 1} ({hand.length}): </strong> {hand.join(', ')}
     </li>
   );
 
