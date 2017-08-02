@@ -8,7 +8,9 @@ http://rnp-code-challenge.azurewebsites.net/
 2) cd rnp-code-challenge
 3) npm install
 4) npm start
-4a) npm test -- run tests
+5) npm test (to run tests)
+
+*might need to install create-react-app globally.  See link below.
 
 ## Create React App
 
