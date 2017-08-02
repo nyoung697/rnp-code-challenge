@@ -1,0 +1,20 @@
+CARDS.JS
+---
+I chose JavaScript/React for this exercise because:
+
+ - My most recent projects are React, so it's fresh in my mind
+ - The simplicity of working with arrays in JavaScript
+ - React (create-react-app) makes building a UI easy, and I figured you'd (the user) want to see a print out of the deck, verify it's being shuffled, and a print out of the "hands" being dealt.
+
+
+* essentially a component is a class
+* create-react-app comes with Jest to run tests
+
+CONSIDERATIONS
+
+ * The description doesn't mention how many "players" or "hands" need to be dealt.  It just says deal one card and potentially all the cards.  I added a setting in the package.json file to specify number of hands to deal.
+
+
+* Knuth-Shuffle -- used this rather than re-inventing the wheel.  Easy to install via npm.
+
+* Using nested-loops is fine, as the max iterations is 52, so there are no performance worries.
